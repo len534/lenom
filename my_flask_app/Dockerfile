@@ -5,5 +5,5 @@ COPY . /app
 WORKDIR /app 
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
-CMD ["app.py","gunicorn --bind 0.0.0.0:$PORT wsgi"]
+CMD ["app.py"]gunicorn --bind 0.0.0.0:$PORT wsgi"
 EXPOSE 8080 / tcp
