@@ -1,0 +1,4 @@
+build:
+  docker:
+    web: /home/zver/Рабочий стол/my_project/my_flask_app/Dockerfile
+
