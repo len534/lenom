@@ -1,8 +1,10 @@
 FROM ubuntu:latest
 RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
+RUN apt-get install -y python3-dev python3-pip build-essential
 COPY . /app
 WORKDIR /app 
-RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+RUN pip3 install -r requirements.txt
+EXPOSE 5000
+CMD ["python3","app.py"]
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi
+
