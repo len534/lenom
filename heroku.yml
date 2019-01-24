@@ -1,4 +1,6 @@
 build:
   docker:
     web: my_flask_app/Dockerfile
+run:
+  web: /home/zver/Рабочий стол/my_project/lenom/my_flask_app
 
