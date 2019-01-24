@@ -6,5 +6,5 @@ WORKDIR /app
 RUN pip3 install -r requirements.txt
 EXPOSE 5000
 CMD ["python3","app.py"]
-CMD gunicorn --bind 0.0.0.0:$PORT wsgi
+CMD exec gunicorn -b :$PORT main:app
 
