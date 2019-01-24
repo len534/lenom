@@ -1,6 +1,4 @@
 build:
   docker:
     web: my_flask_app/Dockerfile
-run:
-  web: ./my_flask_app/app.py
 
